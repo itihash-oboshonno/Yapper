@@ -1,29 +1,23 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Link, Outlet } from 'react-router';
+import Inbox from '../components/InboxLayout/Inbox';
 import Sidebar from '../components/Sidebar/Sidebar';
-import ChatInterface from '../ChatInterface/ChatInterface';
 
 const AppInterface = () => {
     return (
-        <div className='flex h-screen'>
-            
+        <div className="flex h-screen bg-gray-100">
+            {/* Sidebar (Dashboard 1) */}
             <Sidebar />
 
-            <div>
-
-                {/* chatlist */}
-                <div className='flex-1 flex'>
-                    <Outlet />
-                </div>
-
-                {/* inbox layout */}
-                <div className='flex-1'>
-                    <ChatInterface/>
-                </div>
-
+            {/* Chat List (Dashboard 2) */}
+            <div className="w-1/4 bg-gray-50 border-r">
+                <Outlet />
             </div>
 
-            
+            {/* Inbox */}
+            <div className="flex-1 bg-white">
+                <Inbox />
+            </div>
         </div>
     );
 };
