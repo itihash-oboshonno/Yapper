@@ -22,11 +22,11 @@ const Inbox = () => {
 
     return (
         <div className="h-full flex flex-col">
-            <div className="p-4 border-b flex items-center">
-                <div className="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
+            <div className="px-4 py-3.5 border-b-2 border-gray-50 flex items-center shadow">
+                <div className="w-10 h-10 rounded-full mr-4"></div>
                 <div>
                     <h2 className="text-lg font-semibold">{chat.name}</h2>
-                    <p className="text-sm text-green-500">Online</p>
+                    <p className="text-xs text-green-500">Online</p>
                 </div>
             </div>
             <div className="flex-1 p-4 overflow-y-auto">
@@ -37,7 +37,7 @@ const Inbox = () => {
                             }`}
                     >
                         <div
-                            className={`max-w-xs p-3 rounded-lg ${message.sender === 'You' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                            className={`max-w-xs p-3 rounded-2xl ${message.sender === 'You' ? 'bg-black text-white' : 'bg-gray-50'
                                 }`}
                         >
                             <p>{message.text}</p>
@@ -46,11 +46,11 @@ const Inbox = () => {
                     </div>
                 ))}
             </div>
-            <div className="p-4 border-t">
+            <div className="p-4 border-t-2 border-gray-100">
                 <input
                     type="text"
                     placeholder="Write something..."
-                    className="w-full p-2 rounded-lg border"
+                    className="w-full p-2 rounded-lg border-2 border-gray-100 focus:outline-none"
                 />
             </div>
         </div>

@@ -22,24 +22,26 @@ const ChatListLayout = ({ type }) => {
 
   return (
     <div className="h-full">
-      <div className="p-4 border-b">
-        <h2 className="text-lg font-semibold">
-          {type}
+      <div className="p-4 mt-2">
+        <h2 className="text-2xl font-semibold">
+          {type === 'chats' ? 'Chats' : type === 'requests' ? 'Requests' : 'Archive'}
         </h2>
+      </div>
+      <div className='px-4'>
         <input
           type="text"
           placeholder="Search Messenger..."
-          className="w-full mt-2 p-2 rounded-lg border border-gray-300"
+          className="w-full p-2 rounded-lg border-2 border-gray-100 focus:outline-none"
         />
       </div>
-      <div className="overflow-y-auto h-[calc(100%-100px)]">
+      <div className="overflow-y-auto h-[calc(100%-100px)] px-2 py-4">
         {data.map((chat) => (
           <Link
             key={chat?.id}
             to={`${chat?.id}`}
-            className="flex items-center p-4 hover:bg-gray-100"
+            className="flex items-center px-2 py-2 hover:bg-gray-100 hover:rounded-lg"
           >
-            <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+            <div className="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
             <div>
               <h3 className="font-medium">{chat?.name}</h3>
               <p className="text-sm text-gray-500">{chat?.message}</p>
@@ -47,8 +49,6 @@ const ChatListLayout = ({ type }) => {
           </Link>
         ))}
       </div>
-      {/* Nested Outlet for Inbox */}
-      <Outlet />
     </div>
   );
 };

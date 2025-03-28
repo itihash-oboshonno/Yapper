@@ -5,12 +5,12 @@ import Sidebar from '../components/Sidebar/Sidebar';
 
 const AppInterface = () => {
     return (
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen">
             {/* Sidebar (Dashboard 1) */}
             <Sidebar />
 
             {/* Chat List (Dashboard 2) */}
-            <div className="w-1/4 bg-gray-50 border-r">
+            <div className="w-80 border-r-2 border-gray-100">
                 <Outlet />
             </div>
 
