@@ -50,7 +50,7 @@ const Inbox = () => {
                 <input
                     type="text"
                     placeholder="Write something..."
-                    className="w-full p-2 rounded-lg border-2 border-gray-100 focus:outline-none"
+                    className="w-full p-2 rounded-lg bg-gray-50 border-2 border-gray-100 focus:outline-none placeholder:text-gray-700"
                 />
             </div>
         </div>

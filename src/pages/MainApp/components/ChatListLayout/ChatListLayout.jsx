@@ -30,19 +30,19 @@ const ChatListLayout = ({ type }) => {
       <div className='px-4'>
         <input
           type="text"
-          placeholder="Search Messenger..."
-          className="w-full p-2 rounded-lg border-2 border-gray-100 focus:outline-none"
+          placeholder="Search Chats..."
+          className="w-full p-2 rounded-lg bg-gray-50 border-2 border-gray-100 focus:outline-none placeholder:text-gray-700"
         />
       </div>
-      <div className="overflow-y-auto h-[calc(100%-100px)] px-2 py-4">
+      <div className="h-[calc(100%-100px)] py-4">
         {data.map((chat) => (
           <Link
             key={chat?.id}
             to={`${chat?.id}`}
-            className="flex items-center px-2 py-2 hover:bg-gray-100 hover:rounded-lg"
+            className="flex items-center px-4 py-2 hover:bg-gray-100"
           >
-            <div className="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
-            <div>
+            <div className="w-8 h-8 mdt:w-12 mdt:h-12 bg-gray-200 rounded-full mr-4"></div>
+            <div className='hidden mdt:grid'>
               <h3 className="font-medium">{chat?.name}</h3>
               <p className="text-sm text-gray-500">{chat?.message}</p>
             </div>
