@@ -8,17 +8,17 @@ const AppInterface = () => {
     return (
         <div className="flex h-screen bg-white">
             {/* Sidebar (Dashboard 1) */}
-            <div className={`${ openSideBar ? 'w-36' : 'w-14' } transition-all`}>
+            <div className='w-14 transition-all'>
                 <Sidebar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
             </div>
 
             {/* Chat List (Dashboard 2) */}
-            <div className="w-20 mdt:w-80 h-full border-r-2 fixed left-14 border-gray-50">
+            <div className="flex-3 h-full border-r-2 border-gray-50">
                 <Outlet />
             </div>
 
             {/* Inbox */}
-            <div className='w-full h-full fixed left-[376px]'>
+            <div className='flex-12 h-full'>
                 <Inbox />
             </div>
         </div>

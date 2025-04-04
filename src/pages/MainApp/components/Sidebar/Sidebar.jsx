@@ -11,7 +11,7 @@ const Sidebar = ({ openSideBar, setOpenSideBar }) => {
   const Navigations = (
     <>
       <li className="flex w-full">
-        <NavLink to="/chats"
+        <NavLink to="/t"
           className={({ isActive }) =>
             isActive
               ? `font-semibold text-white bg-black py-2 transition-all w-full flex items-center gap-2 ${openSideBar ? 'px-6' : 'px-4'}`
@@ -20,7 +20,7 @@ const Sidebar = ({ openSideBar, setOpenSideBar }) => {
         ><IoIosChatboxes className='text-2xl transition-all' /> <span className={openSideBar ? 'flex' : 'hidden'}>Chats</span></NavLink>
       </li>
       <li className="flex w-full">
-        <NavLink to="/requests"
+        <NavLink to="/requests/t"
           className={({ isActive }) =>
             isActive
               ? `font-semibold text-white bg-black py-2 transition-all w-full flex items-center gap-2 ${openSideBar ? 'px-6' : 'px-4'}`
@@ -29,7 +29,7 @@ const Sidebar = ({ openSideBar, setOpenSideBar }) => {
         ><TbMessageQuestion className='text-2xl transition-all' /> <span className={openSideBar ? 'flex' : 'hidden'}>Requests</span></NavLink>
       </li>
       <li className="flex w-full">
-        <NavLink to="/archive"
+        <NavLink to="/archive/t"
           className={({ isActive }) =>
             isActive
               ? `font-semibold text-white bg-black py-2 transition-all w-full flex items-center gap-2 ${openSideBar ? 'px-6' : 'px-4'}`
@@ -43,7 +43,7 @@ const Sidebar = ({ openSideBar, setOpenSideBar }) => {
   return (
     <div className="flex flex-col items justify-between min-h-screen bg-white z-50 fixed left-0 shadow-xl">
       <div className={`${openSideBar ? 'flex items-center justify-between p-4' : 'flex flex-col-reverse items-center gap-3 pt-4'} transition-all`}>
-        <Link to='/chats'>
+        <Link to='/t'>
           <img className={`w-8 h-8 rounded-md transition-all`} src={logo} alt="" />
         </Link>
         <button className='z-50 transition-all'

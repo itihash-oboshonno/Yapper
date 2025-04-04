@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router';
+import { Link } from 'react-router';
 
 const ChatListLayout = ({ type }) => {
   const chats = [
@@ -41,7 +41,7 @@ const ChatListLayout = ({ type }) => {
             to={`${chat?.id}`}
             className="flex items-center px-4 py-2 hover:bg-gray-100"
           >
-            <div className="w-8 h-8 mdt:w-12 mdt:h-12 bg-gray-200 rounded-full mr-4"></div>
+            <div className="w-8 h-8 mdt:w-12 mdt:h-12 bg-gray-200 rounded-full mdt:mr-4"></div>
             <div className='hidden mdt:grid'>
               <h3 className="font-medium">{chat?.name}</h3>
               <p className="text-sm text-gray-500">{chat?.message}</p>

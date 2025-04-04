@@ -15,14 +15,13 @@ const AppRoutes = () => {
         return (
             <Routes>
                 <Route path='/' element={<AppInterface />}>
-                    {/* first level of nesting. */}
-                    <Route path='chats' element={<ChatListLayout type='chats' />}>
+                    <Route path='t' element={<ChatListLayout type='chats' />}>
                         <Route path=':chatId' element={<Inbox />} />
                     </Route>
-                    <Route path='requests' element={<ChatListLayout type='requests' />}>
+                    <Route path='requests/t' element={<ChatListLayout type='requests' />}>
                         <Route path=':chatId' element={<Inbox />} />
                     </Route>
-                    <Route path='archive' element={<ChatListLayout type='archive' />}>
+                    <Route path='archive/t' element={<ChatListLayout type='archive' />}>
                         <Route path=':chatId' element={<Inbox />} />
                     </Route>
                 </Route>
